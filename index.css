@@ -17,6 +17,7 @@
 
 body {
 	margin: 0;
+	font-family: 'roboto', sans-serif;
 }
 
 .MainBackground {
@@ -59,7 +60,7 @@ body {
 	margin-left:  20px;
 	margin-right: 20px;
 	font-weight: medium;
-	font-size: 20;
+	font-size: 20px;
 	color: var(--card-text-highlight-color);
 }
 
@@ -70,7 +71,6 @@ body {
 }
 
 .CardBody {
-	margin: 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -78,8 +78,8 @@ body {
 }
 
 .CardItems {
-	width: 100%;
-	margin: 15px 0px 15px 0px;
+	width: 80%;
+	margin: 15px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -87,6 +87,7 @@ body {
 }
 
 .CardItem {
+	width: 100%;
 	margin: 5px;
 	display: flex;
 	flex-direction: row;
@@ -96,18 +97,32 @@ body {
 
 .CardBodyText {
 	font-weight: bold;
-	font-size: 15;
+	font-size: 15px;
+	color: var(--card-text-color);
+	text-transform: uppercase;
+}
+
+.CardBodyTextCentered {
+	margin: auto;
+	font-weight: bold;
+	font-size: 15px;
 	color: var(--card-text-color);
 	text-transform: uppercase;
 }
 
 .CardBodyTextHighlight {
 	font-weight: bold;
-	font-size: 22;
+	font-size: 22px;
+	color: var(--card-text-highlight-color);
+}
+
+.CardBodyTextHighlightCentered {
+	margin: auto;
+	font-weight: bold;
+	font-size: 22px;
 	color: var(--card-text-highlight-color);
 }
 
 .HorizBarChart {
-	width: 80%;
 	background-color: green;
 }
