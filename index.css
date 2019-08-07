@@ -13,6 +13,8 @@
 	--card-bar-color: red;
 	--card-text-highlight-color: white;
 	--card-text-color: LightGrey;
+	--text-background-highlight: green;
+	--text-background: DarkGrey;
 }
 
 body {
@@ -38,12 +40,13 @@ body {
 }
 
 .CardBoardContainer {
+	padding: 5px;
 	display: flex;
 }
 
 .CardContainer {
 	width: 50%;
-	margin: 10px;
+	margin: 5px;
 	background-color: var(--card-background-color);
 }
 
@@ -59,7 +62,7 @@ body {
 .CardBarTitle {
 	margin-left:  20px;
 	margin-right: 20px;
-	font-weight: medium;
+	font-weight: bold;
 	font-size: 20px;
 	color: var(--card-text-highlight-color);
 }
@@ -71,6 +74,7 @@ body {
 }
 
 .CardBody {
+	padding: 7px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -78,8 +82,8 @@ body {
 }
 
 .CardItems {
-	width: 80%;
-	margin: 15px;
+	width: 93%;
+	margin: 7px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
