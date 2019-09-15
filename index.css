@@ -1,5 +1,3 @@
-@import '~material-icons/iconfont/material-icons.css';
-
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -7,14 +5,14 @@
 .material-icons.md-48 { font-size: 48px; }
 
 :root {
-	--main-background-color: DimGrey;
-	--card-background-color: Grey;
+	--main-background-color: #272727;
+	--card-background-color: #363636;
 	--main-card-bar-color: darkred;
 	--card-bar-color: red;
 	--card-text-highlight-color: white;
 	--card-text-color: LightGrey;
-	--text-background-highlight: green;
-	--text-background: DarkGrey;
+	--text-background-highlight: #009499;
+	--text-background: Grey;
 }
 
 body {
@@ -104,6 +102,7 @@ body {
 	font-size: 15px;
 	color: var(--card-text-color);
 	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .CardBodyTextCentered {
@@ -118,6 +117,13 @@ body {
 	font-weight: bold;
 	font-size: 22px;
 	color: var(--card-text-highlight-color);
+	white-space: nowrap;
+	margin-left: 10px;
+}
+
+.CardBodyUnits {
+	font-size: 18px;
+	display: inline;
 }
 
 .CardBodyTextHighlightCentered {
