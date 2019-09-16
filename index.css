@@ -88,6 +88,10 @@ body {
 	align-items: center;
 }
 
+.GraphBar {
+	align-self: flex-start;
+}
+
 .CardItem {
 	width: 100%;
 	margin: 5px;
@@ -106,7 +110,7 @@ body {
 }
 
 .CardBodyTextCentered {
-	margin: auto;
+	margin-right: auto;
 	font-weight: bold;
 	font-size: 15px;
 	color: var(--card-text-color);
@@ -127,7 +131,7 @@ body {
 }
 
 .CardBodyTextHighlightCentered {
-	margin: auto;
+	margin-left: auto;
 	font-weight: bold;
 	font-size: 22px;
 	color: var(--card-text-highlight-color);
