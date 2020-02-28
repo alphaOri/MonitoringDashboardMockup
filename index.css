@@ -1,35 +1,47 @@
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-42 { font-size: 42px; }
 .material-icons.md-44 { font-size: 44px; }
 .material-icons.md-48 { font-size: 48px; }
 
 :root {
 	--main-background-color: #272727;
 	--card-background-color: #363636;
-	--main-card-bar-color: darkred;
-	--card-bar-color: red;
+	--main-card-bar-color: #B40000;
+	--card-bar-color: #B40000;
 	--card-text-highlight-color: white;
+	/*--card-text-highlight-color: #778899;*/
 	--card-text-color: LightGrey;
-	--text-background-highlight: #009499;
+	--text-background-highlight: #516D91;
+	--text-background-highlight-dark: #3d516c;
 	--text-background: Grey;
+	--text-background-dark: DimGrey;
+	/*--button-color: #778899;*/ 
+	--button-color: #516d91; /*blue*/
+	--button-highlight-color: #3780de;
+	--button-alt-color: #FF8800;
+	--button-alt-highlight-color: #FFBF00;
 }
 
 body {
 	margin: 0;
 	font-family: 'roboto', sans-serif;
+	color: var(--card-text-color);
 }
+
+button { font-family: inherit }
 
 .MainBackground {
 	background-color: var(--main-background-color);
 	overflow: auto;
-	height: 1280px;
-	width: 800px;
+	height: 1600px;
+	width: 1200px;
 }
 
 .MainTopBar {
 	background-color: var(--main-card-bar-color);
-	height: 60px;
+	height: 68px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -40,35 +52,81 @@ body {
 .CardBoardContainer {
 	padding: 5px;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .CardContainer {
-	width: 50%;
+	width: 585px;
 	margin: 5px;
-	background-color: var(--card-background-color);
+}
+
+.MiniCardContainer {
+	width: 585px;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.CardFullwidthContainer {
+	width: 100%;
+	flex-basis: 100%;
+	margin: 5px;
 }
 
 .CardBar {
 	background-color: var(--card-bar-color);
-	height: 60px;
+	height: 62px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
+.TabBar {
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.Tab {
+	flex: 1;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .CardBarTitle {
 	margin-left:  20px;
 	margin-right: 20px;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
+	color: var(--card-text-highlight-color);
+}
+
+.CardBarLeft {
+	display: flex;
+	color: var(--card-text-highlight-color);
+	margin-left:  20px;
+	margin-right: 20px;
+	align-items: center;
+}
+
+.CardBarMiddle {
+	font-weight: bold;
+	font-size: 24px;
 	color: var(--card-text-highlight-color);
 }
 
 .CardBarRight {
+	display:flex;
 	color: var(--card-text-highlight-color);
-	margin-left:  20px;
-	margin-right: 20px;
+	background-color: var(--card-bar-color);
+	padding-left:  20px;
+	padding-right: 20px;
+	height: 100%;
+	align-items: center;
 }
 
 .CardBody {
@@ -77,6 +135,17 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--card-background-color);
+}
+
+.MiniCardBody {
+	padding: 7px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--card-background-color);
 }
 
 .CardItems {
@@ -86,10 +155,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.GraphBar {
-	align-self: flex-start;
 }
 
 .CardItem {
@@ -103,7 +168,7 @@ body {
 
 .CardBodyText {
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 18px;
 	color: var(--card-text-color);
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -112,31 +177,180 @@ body {
 .CardBodyTextCentered {
 	margin-right: auto;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 18px;
 	color: var(--card-text-color);
+	text-transform: uppercase;
+}
+
+.CardBodyTextCenteredHighlight {
+	margin-right: auto;
+	font-weight: bold;
+	font-size: 18px;
+	color: var(--card-text-highlight-color);
 	text-transform: uppercase;
 }
 
 .CardBodyTextHighlight {
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 24px;
 	color: var(--card-text-highlight-color);
 	white-space: nowrap;
 	margin-left: 10px;
 }
 
-.CardBodyUnits {
-	font-size: 18px;
-	display: inline;
-}
-
 .CardBodyTextHighlightCentered {
 	margin-left: auto;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 24px;
 	color: var(--card-text-highlight-color);
+}
+
+.CardBodyUnits {
+	font-size: 20px;
+	display: inline;
+}
+
+/*Water Card Styles*/
+
+.RectangularButton {
+  background-color: var(--button-color);
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  height: 58px;
+  width: 100px;
+}
+
+.GraphBar {
+	align-self: flex-start;
+}
+
+.LabelContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.Label {
+	background-color: var(--text-background);
+	border-radius: 20px;
+	padding: 3px 10px;
+	margin: 5px;
+}
+
+.LabelText {
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--card-text-highlight-color);
+	text-transform: lowercase;
 }
 
 .HorizBarChart {
 	background-color: green;
+}
+
+/*Air Card Styles*/
+
+.CircleRectangleButtons{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.CircleButton{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: -7px;
+}
+
+.Circle {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 86px;
+	height: 86px;
+	border-radius: 50%;
+	background-color: var(--button-color);
+}
+
+.CircleIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 56px;
+	color: var(--card-text-highlight-color);
+}
+
+
+.CircleText {
+	position: absolute;
+	bottom: 10px;
+	right: 19px;
+	text-align: center;
+	background-color: var(--button-color);
+}
+
+.AroundCircleSvg {
+	position: relative;
+	left: -7px;
+	height: 66px;
+	fill: var(--button-color);
+}
+
+.RectangleButton {
+	height: 66px;
+	min-width: 66px;
+	background-color: var(--button-color);
+	color: var(--card-text-highlight-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.RectangleDisplay {
+	height: 66px;
+	background-color: var(--text-background-highlight-dark);
+    padding: 0px 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.DisplayContainer {
+	height: 66px;
+	min-width: 135px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--card-background-color); 
+}
+
+.DisplayColumn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ValueDisplay {
+	margin: 6px;
+	font-weight: bold;
+	font-size: 24px;
+	color: var(--card-text-highlight-color);
+}
+
+.ValueDisplayCaps {
+	margin: 6px;
+	font-weight: bold;
+	font-size: 18px;
+	color: var(--card-text-highlight-color);
+	text-transform: uppercase;
+	white-space: nowrap;
 }

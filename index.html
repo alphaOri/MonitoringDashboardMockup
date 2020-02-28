@@ -5,31 +5,43 @@
     <title>Dashboard Mockup</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href='/home/david/node_modules/material-design-icons/iconfont/material-icons.css'>
+    <link rel="stylesheet" href='/home/david/.node-red/uibuilder/react_ui/src/react_app/public/icomoon/style.css'>
     <link rel="stylesheet" href='roboto-font.css'>
   </head>
   <body>
   		<div class="MainBackground">
   			<div class="MainTopBar">
-				<div class="CardBarTitle">
-					Home
-				</div>
+                <div class="CardBarLeft">
+                    <i class="material-icons md-42">menu</i>
+    				<div class="CardBarTitle">
+    					Home
+    				</div>
+                </div>
+                <div class="CardBarMiddle">
+                    Monday, July 2, 10:24:16 PM
+                </div>
 				<div class="CardBarRight">
-					<i class="material-icons md-36">settings</i>
+					<i class="material-icons md-42">settings</i>
 				</div>
     		</div>
     		<div class="CardBoardContainer">
+                <div class="CardFullwidthContainer">
+                    <div class="CardBody">
+                      Graph goes here.
+                    </div>
+                </div>
     			<!-- water card -->
-    			<div class="CardContainer">
+    			<div class="CardContainer" style="height: 378px;">
     				<div class="CardBar">
     					<div class="CardBarTitle">
     						Water
     					</div>
     					<div class="CardBarRight">
-    						<i class="material-icons md-36">settings_overscan</i>
+    						<i class="material-icons md-42">settings_overscan</i>
     					</div>
     				</div>
     				<div class="CardBody">
-    					<div class="CardItems" style="width: 75%">
+    					<div class="CardItems" style="width: 55%">
 	    					<div class="CardItem">
 	    						<div class="CardBodyTextCentered">
 	    							usage till now
@@ -53,11 +65,35 @@
 	    						</div>
 	    					</div>
 	    				</div>
+                        <div class="CardItems">
+                            <div class="LabelContainer">
+                                <div class="Label">
+                                    <div class="LabelText">
+                                        dishwasher
+                                    </div>
+                                </div>
+                                <div class="Label">
+                                    <div class="LabelText">
+                                        hose
+                                    </div>
+                                </div>
+                                <div class="Label">
+                                    <div class="LabelText">
+                                        shower
+                                    </div>
+                                </div>
+                                <div class="Label">
+                                    <div class="LabelText">
+                                        tub
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 	    				<div class="CardItems">
-	    					<div class="CardItem" style="width:10%; background-color: var(--text-background-highlight); align-self: flex-start;">
+	    					<div class="CardItem" style="width:80%; background: linear-gradient(90deg, var(--text-background) 20%, var(--text-background-dark) 20%); align-self: flex-start;">
     							<div class="CardItem">
     								<div class="CardBodyText">
-    									Today (est.)
+    									Today
     								</div>
     								<div class="CardBodyTextHighlight">
     									80
@@ -67,7 +103,20 @@
     								</div>
     							</div>
 		    				</div>
-	    					<div class="CardItem" style="width:50%; background-color: var(--text-background); align-self: flex-start;">
+                            <div class="CardItem" style="width:100%; background: linear-gradient(90deg, var(--text-background) 30%, var(--text-background-dark) 30%); align-self: flex-start;">
+                                <div class="CardItem">
+                                    <div class="CardBodyText">
+                                        Average
+                                    </div>
+                                    <div class="CardBodyTextHighlight">
+                                        60
+                                        <div class="CardBodyUnits">
+                                             gallons
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+	    					<div class="CardItem" style="width:50%; background-color: var(--text-background-dark); align-self: flex-start;">
     							<div class="CardItem">
     								<div class="CardBodyText">
     									Yesterday
@@ -80,23 +129,207 @@
     								</div>
     							</div>
 		    				</div>
-	    					<div class="CardItem" style="width:100%; background-color: var(--text-background); align-self: flex-start;">
-    							<div class="CardItem">
-    								<div class="CardBodyText">
-    									Average
-    								</div>
-    								<div class="CardBodyTextHighlight">
-    									60
-                                        <div class="CardBodyUnits">
-                                             gallons
-                                        </div>
-    								</div>
-    							</div>
-		    				</div>
 	    				</div>
 	    			</div>
     			</div>
     			<!-- end water card -->
+                <!-- air card -->
+                <div class="CardContainer" style="height: 378px;">
+                    <div class="CardBar">
+                        <div class="CardBarTitle">
+                            Air
+                        </div>
+                        <div class="CardBarRight">
+                            <i class="material-icons md-42">settings_overscan</i>
+                        </div>
+                    </div>
+                    <div class="CardBody">
+                        <div class="CardItems" style="width: 97%;margin-left:14px;">
+                            <!-- temperature -->
+                            <div class="CardItem">
+                                <div class="CircleRectangleButtons">
+                                    <div class="CircleButton">
+                                        <div class="Circle">
+                                            <div class="CircleIcon">
+                                                <i class="icon-iconmonstr-weather-134-1"></i>
+                                            </div>
+                                        </div>
+                                        <svg class="AroundCircleSvg" viewBox="0 0 3.415 17.462"><path d="M.016 0a12.965 12.965 0 013.4 8.731V0zm3.4 8.731A12.965 12.965 0 010 17.463h3.415z"/></svg>
+                                    </div>
+                                    <div class="RectangleButton"><i class="material-icons md-42">expand_more</i></div>
+                                    <div class="RectangleDisplay">
+                                        <div class="ValueDisplay">
+                                            68&#176
+                                        </div>
+                                    </div>
+                                    <div class="RectangleButton"><i class="material-icons md-42">expand_less</i></div>
+                                    <div class="RectangleButton" style="margin:6px;width:120px;border-radius: 0 4px 4px 0;">
+                                        <div class="ValueDisplayCaps">
+                                            schedule
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="DisplayContainer">
+                                    <div class="DisplayColumn">
+                                        <div class="CardBodyText">
+                                            in
+                                        </div>
+                                        <div class="ValueDisplay">
+                                            68&#176
+                                        </div>
+                                    </div>
+                                    <div class="DisplayColumn">
+                                        <div class="CardBodyText">
+                                            out
+                                        </div>
+                                        <div class="ValueDisplay">
+                                            81&#176
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- humidity -->
+                            <div class="CardItem">
+                                <div class="CircleRectangleButtons">
+                                    <div class="CircleButton">
+                                        <div class="Circle" style="background-color: var(--button-highlight-color);">
+                                            <div class="CircleIcon">
+                                                <i class="icon-iconmonstr-drop-21"></i>
+                                            </div>
+                                        </div>
+                                        <svg class="AroundCircleSvg" viewBox="0 0 3.415 17.462"><path d="M.016 0a12.965 12.965 0 013.4 8.731V0zm3.4 8.731A12.965 12.965 0 010 17.463h3.415z"/></svg>
+                                    </div>
+                                    <div class="RectangleButton"><i class="material-icons md-42">expand_more</i></div>
+                                    <div class="RectangleDisplay">
+                                        <div class="ValueDisplay">
+                                            45%
+                                        </div>
+                                    </div>
+                                    <div class="RectangleButton" style="border-radius: 0 4px 4px 0;"><i class="material-icons md-42">expand_less</i></div>
+                                    <div class="CircleButton" style="margin-left:21px;">
+                                        <div class="Circle">
+                                            <div class="CircleIcon">
+                                                <i class="icon-fan"></i>
+                                            </div>
+                                            <div class="CircleText">
+                                                <div class="CardBodyTextCenteredHighlight">
+                                                    auto
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="DisplayContainer">
+                                    <div class="DisplayColumn">
+                                        <div class="CardBodyText">
+                                            in
+                                        </div>
+                                        <div class="ValueDisplay">
+                                            47%
+                                        </div>
+                                    </div>
+                                    <div class="DisplayColumn">
+                                        <div class="CardBodyText">
+                                            out
+                                        </div>
+                                        <div class="ValueDisplay">
+                                            62%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ventilation -->
+                            <div class="CardItem">
+                                <div class="CircleRectangleButtons">
+                                    <div class="CircleButton">
+                                        <div class="Circle">
+                                            <div class="CircleIcon">
+                                                <i class="icon-iconmonstr-weather-91-1"></i>
+                                            </div>
+                                            <div class="CircleText">
+                                                <div class="CardBodyTextCenteredHighlight">
+                                                    auto
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <svg class="AroundCircleSvg" viewBox="0 0 3.415 17.462"><path d="M.016 0a12.965 12.965 0 013.4 8.731V0zm3.4 8.731A12.965 12.965 0 010 17.463h3.415z"/></svg>
+                                    </div>
+                                    <div class="RectangleButton"><i class="material-icons md-42">expand_more</i></div>
+                                    <div class="RectangleDisplay">
+                                        <div class="ValueDisplay">
+                                            1230
+                                            <div class="CardBodyUnits">
+                                                ppm
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="RectangleButton" style="border-radius: 0 4px 4px 0;"><i class="material-icons md-42">expand_less</i></div>
+                                </div>
+                                <div class="DisplayContainer">
+                                    <div class="DisplayColumn">
+                                        <div class="CardBodyText">
+                                            in
+                                        </div>
+                                        <div class="ValueDisplay">
+                                            1114
+                                            <div class="CardBodyUnits">
+                                                ppm
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end air card -->
+                <div class="MiniCardContainer"> 
+                    <div class="MiniCardBody">
+                        <div class="CardItems" style="width: 60%">
+                            <div class="CardItem">
+                                <div class="CardBodyTextCentered">
+                                    water valve is
+                                    <span class="CardBodyTextCenteredHighlight"> closed</span>
+                                </div>
+                                <button class="RectangularButton" style="background-color: var(--button-alt-color);">
+                                    <div class="CardBodyTextCenteredHighlight">
+                                        Open
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="MiniCardBody">
+                        <div class="CardItems" style="width: 60%">
+                            <div class="CardItem">
+                                <div class="CardBodyTextCentered">
+                                    water valve is
+                                    <span class="CardBodyTextCenteredHighlight"> open</span>
+                                </div>
+                                <button class="RectangularButton" style="background-color: var(--button-alt-highlight-color);">
+                                    <div class="CardBodyTextCenteredHighlight">
+                                        Close
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MiniCardBody">
+                        <div class="CardItems" style="width: 55%">
+                            <div class="CardItem">
+                                <div class="CardBodyText">
+                                     water pressure
+                                </div>
+                                <div class="CardBodyTextHighlight">
+                                    56
+                                    <div class="CardBodyUnits">
+                                         psi
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     		</div>
     	</div>
     </body>
