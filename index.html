@@ -5,7 +5,7 @@
     <title>Dashboard Mockup</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href='/home/david/node_modules/material-design-icons/iconfont/material-icons.css'>
-    <link rel="stylesheet" href='/home/david/.node-red/uibuilder/react_ui/src/react_app/public/icomoon/style.css'>
+    <link rel="stylesheet" href='/home/david/.node-red/uibuilder/react_ui/src/react_app/src/scenes/fonts/icomoon/style.css'>
     <link rel="stylesheet" href='roboto-font.css'>
   </head>
   <body>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
     			<!-- water card -->
-    			<div class="CardContainer" style="height: 378px;">
+    			<div class="CardContainer">
     				<div class="CardBar">
     					<div class="CardBarTitle">
     						Water
@@ -40,7 +40,7 @@
     						<i class="material-icons md-42">fullscreen</i>
     					</div>
     				</div>
-    				<div class="CardBody">
+    				<div class="CardBody" style="height: 300px;">
     					<div class="CardItems" style="width: 55%">
 	    					<div class="CardItem">
 	    						<div class="CardBodyTextCentered">
@@ -134,7 +134,7 @@
     			</div>
     			<!-- end water card -->
                 <!-- air card -->
-                <div class="CardContainer" style="height: 378px;">
+                <div class="CardContainer">
                     <div class="CardBar">
                         <div class="CardBarTitle">
                             Air
@@ -143,7 +143,7 @@
                             <i class="material-icons md-42">fullscreen</i>
                         </div>
                     </div>
-                    <div class="CardBody">
+                    <div class="CardBody" style="height: 300px;">
                         <div class="CardItems" style="width: 93%;margin-left:14px;">
                             <!-- temperature -->
                             <div class="CardItem">
@@ -151,7 +151,12 @@
                                     <div class="CircleButton" style="margin-right: -7px;">
                                         <div class="Circle">
                                             <div class="CircleIcon">
-                                                <i class="icon-iconmonstr-weather-137"></i>
+                                                <i class="icon-iconmonstr-weather-135-blank"></i>
+                                            </div>
+                                            <div class="CircleText" style="bottom: 40px; right: 7px;">
+                                                <div class="CardBodyTextCenteredHighlight">
+                                                    off
+                                                </div>
                                             </div>
                                         </div>
                                         <svg class="AroundCircleSvg" style="left: -7px;" viewBox="0 0 3.415 17.462"><path d="M.016 0a12.965 12.965 0 013.4 8.731V0zm3.4 8.731A12.965 12.965 0 010 17.463h3.415z"/></svg>
@@ -202,7 +207,12 @@
                                     <div class="CircleButton" style="margin-right: -7px;">
                                         <div class="Circle" style="background-color: var(--button-highlight-color);">
                                             <div class="CircleIcon">
-                                                <i class="icon-iconmonstr-drop-21"></i>
+                                                <i class="icon-iconmonstr-drop-19-blank"></i>
+                                            </div>
+                                            <div class="CircleText" style="bottom: 24px; right: 7px;">
+                                                <div class="CardBodyTextCenteredHighlight">
+                                                    off
+                                                </div>
                                             </div>
                                         </div>
                                         <svg class="AroundCircleSvg" style="left: -7px;" viewBox="0 0 3.415 17.462"><path d="M.016 0a12.965 12.965 0 013.4 8.731V0zm3.4 8.731A12.965 12.965 0 010 17.463h3.415z"/></svg>

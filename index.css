@@ -292,7 +292,7 @@ button { font-family: inherit }
 	bottom: 10px;
 	right: 19px;
 	text-align: center;
-	background-color: var(--button-color);
+	background-color: inherit;
 }
 
 .AroundCircleSvg {
