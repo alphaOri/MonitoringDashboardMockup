@@ -6,8 +6,9 @@
 .material-icons.md-48 { font-size: 48px; }
 
 :root {
-	--main-background-color: #272727;
-	--card-background-color: #363636;
+	--main-background-color: #272727; /*dark grey*/
+	--card-background-color: #333333; /*medium grey*/
+	--card-highlight-color: #3D3D3D; /*light grey*/
 	--main-card-bar-color: #B40000;
 	--card-bar-color: #B40000;
 	--card-text-highlight-color: white;
@@ -19,6 +20,7 @@
 	--text-background-dark: DimGrey;
 	/*--button-color: #778899;*/ 
 	--button-color: #516d91; /*blue*/
+	--button-click-color: #5c7ba3;
 	--button-highlight-color: #3780de;
 	--button-alt-color: #FF8800;
 	--button-alt-highlight-color: #FFBF00;
@@ -83,8 +85,13 @@ button { font-family: inherit }
 	align-items: center;
 }
 
+.TabContainer {
+	width: 100%;
+	background-color: var(--card-background-color);
+}
+
 .TabBar {
-	height: 50px;
+	height: 66px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -95,6 +102,34 @@ button { font-family: inherit }
 	display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.TabBody {
+	padding: 7px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--card-highlight-color);
+}
+
+.CheckBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 4px;
+	border-color: var(--text-background-highlight);
+}
+
+.RowGroup {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .CardBarTitle {
@@ -294,7 +329,7 @@ button { font-family: inherit }
 	width: 100%;
     white-space: nowrap;
 	position: absolute;
-	bottom: 10px;
+	bottom: 11px;
 	text-align: center;
 	background-color: inherit;
     visibility: hidden;
