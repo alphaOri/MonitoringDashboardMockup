@@ -105,7 +105,6 @@ button { font-family: inherit }
 }
 
 .TabBody {
-	padding: 7px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -220,6 +219,8 @@ button { font-family: inherit }
 .CardBodyTextCenteredHighlight {
 	display: inline;
 	margin-right: auto;
+	padding: 0 3px;
+	border-radius: 4px;
 	font-weight: bold;
 	font-size: 18px;
 	color: var(--card-text-highlight-color);
@@ -326,10 +327,10 @@ button { font-family: inherit }
 
 
 .CircleText {
-	width: 100%;
-    white-space: nowrap;
+	width: 80%;
+    white-space: pre-wrap;
 	position: absolute;
-	bottom: 11px;
+	bottom: 13px;
 	text-align: center;
 	background-color: inherit;
     visibility: hidden;
